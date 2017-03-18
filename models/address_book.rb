@@ -1,12 +1,9 @@
 require_relative 'entry'
 require "csv"
+require 'boltz_record/base'
 
-class AddressBook
+class AddressBook < BoltzRecord::Base
   attr_reader :entries
-
-  def initialize
-    @entries = []
-  end
 
   def add_entry(name, phone_number, email)
     index = 0
