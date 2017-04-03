@@ -2,7 +2,8 @@ require_relative '../models/address_book'
 require_relative '../models/entry'
 require 'boltz_record'
 
-BoltzRecord.connect_to('db/address_bloc.sqlite')
+BoltzRecord.connect_to('db/address_bloc.sqlite', :sqlite3)
+# BoltzRecord.connect_to("address_bloc", :pg)
 
 book = AddressBook.create(name: 'My Address Book')
 
